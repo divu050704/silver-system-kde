@@ -1,0 +1,24 @@
+1. cfdisk
+2. mkfs.ext4 /dev/sda1
+3. mkswap /dev/sda2
+4. mount /dev/sda1 /mnt
+5. swapon /dev/sda2
+6. pacstarp /mnt base linux linux-firmware nano
+7. arch-chroot /mnt
+8. ln -sf /usr/share/zoneinfo/Asia/Kolkata > /etc/localtime
+9. hwcloak --systohc
+10. nano /etc/locale.gen
+11. nano /etc/locale.conf
+12. passwd
+13. pacman -S grub efibootmg
+14. grub-install /dev/sda
+15. grub-mkconfig -o /boot/grub/grub.cf
+16. pacman -S networkmanager
+17. systemctl enable NetworkManager
+remove boot drive
+18. reboot
+19. login: root
+20. pacman -S gnome/plasma/etc 
+21. systemctl enable sddm/gdm/lightdm
+
+ 
